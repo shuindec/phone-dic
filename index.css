@@ -1,0 +1,69 @@
+html, body, .page {
+    width: 100vw;
+    height: 100vh;
+    margin: 20px;
+    text-align: center;
+    font-family:monospace;
+    text-decoration-color: #191717;
+  }
+
+div {margin: 4px;
+    font-family:monospace; }
+
+input { margin: 4px;
+        width: 15vw;
+        height: .7cm;
+        background-color: #F1EFEF;
+}
+
+h2,h3 {padding: 4px;}
+h1 {padding-top: 1cm;}
+
+table, th,td {
+  border:1px solid #7D7C7C; 
+  text-align: center;
+  width: 60vw;
+  margin: 10px;
+  padding: 2px;
+  background-color: #F1EFEF;
+
+}
+
+.CreateContact{
+  text-align: left;
+  font-size:large;
+  margin: 5px;
+  margin-top: 10px;
+  background-color: #CCC8AA;
+  width: 70vw;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid white;
+}
+
+button {padding: 5px;
+    margin-left: 5px ;
+    font-family:monospace;
+    text-size-adjust: 20%;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #c74938;
+  }
+  
+.button2:hover {
+    background-color: #c74938;
+    color: white;
+  }
