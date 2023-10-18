@@ -63,7 +63,10 @@ function Contacts(props) {
       
       {props.contacts.map((contact) => (
   		<div key={`contact_${contact.id}`} className='CreateContact'>
-    		<Phones setContacts={props.setContacts} contactId={contact.id} name={contact.name} />
+    		<Phones setContacts={props.setContacts} 
+					contactId={contact.id} 
+					name={contact.name} />
+          
     		<button
      			className="button2"
      			style={{ width: "30%" }}

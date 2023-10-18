@@ -30,10 +30,11 @@ function Phones(props) {
   const [newType, setType] = useState('');
   useEffect(() => {
     // Clear the existing phones before fetching new data
-    setPhones([]);
+    
     fetch(`http://localhost/api/contacts/${props.contactId}/phones`)
       .then(response => response.json())
       .then(data => {
+        setPhones([]);
         // Append the new phones to the existing phones
         setPhones(data);
       })

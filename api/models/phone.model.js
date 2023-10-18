@@ -11,7 +11,10 @@ module.exports = (sequelize, Sequelize) => {
         },
         number: {
             type: Sequelize.INTEGER,
-        }
+        },
+        contactId: {
+            type: Sequelize.INTEGER,
+        },
     });
   
     return Phone;

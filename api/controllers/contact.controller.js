@@ -40,7 +40,9 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    Contacts.findOne(id)
+    Contacts.findOne({
+        where: { id: id }
+    })
         .then(data => {
             if (data) {
                 res.send(data);
@@ -55,7 +57,6 @@ exports.findOne = (req, res) => {
                 message: "Error retrieving contact with id=" + id
             });
         });
-  
 };
 
 // Update one contact by id
