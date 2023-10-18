@@ -6,7 +6,7 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
     const contactId = req.params.contactId;
     const phone = {
-        contactId,
+        contactId: contactId,
         type: req.body.type,
         number: req.body.number,
     };
@@ -26,7 +26,7 @@ exports.create = (req, res) => {
 
 // Get all phones
 exports.findAll = (req, res) => {
-    Phones.findAll()
+    Phones.findAll({where: {contactId: req.params.contactId}})
     .then(data => {
     res.send(data);
     })
@@ -42,19 +42,21 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {  
     const id = req.params.id;
 
-    Contacts.findOne(id)
+    Phones.findOne({
+        where: { id: id }
+    })
         .then(data => {
             if (data) {
                 res.send(data);
             } else {
                 res.status(404).send({
-                    message: `Contact with id=${id} not found`
+                    message: `Phone with id=${id} not found`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error retrieving contact with id=" + id
+                message: "Error retrieving phone with id=" + id
             });
         });
 

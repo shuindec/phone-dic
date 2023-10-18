@@ -14,6 +14,10 @@ module.exports = (sequelize, Sequelize) => {
         },
         contactId: {
             type: Sequelize.INTEGER,
+            references: {
+                model: 'contacts', // Make sure this matches the actual model name for contacts
+                key: 'id'
+            }
         },
     });
   

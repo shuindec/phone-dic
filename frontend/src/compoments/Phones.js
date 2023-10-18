@@ -30,7 +30,7 @@ function Phones(props) {
   const [newType, setType] = useState('');
   useEffect(() => {
     // Clear the existing phones before fetching new data
-    
+    console.log('Contact ID:', props.contactId);
     fetch(`http://localhost/api/contacts/${props.contactId}/phones`)
       .then(response => response.json())
       .then(data => {
