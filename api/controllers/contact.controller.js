@@ -38,10 +38,10 @@ exports.findAll = (req, res) => {
 
 // Get one contact by id
 exports.findOne = (req, res) => {
-    const id = req.params.id;
+    const id = req.params.contactId;
 
     Contacts.findOne({
-        where: { id: id }
+        where: {id: id }
     })
         .then(data => {
             if (data) {
@@ -66,7 +66,7 @@ exports.update = (req, res) => {
 
 // Delete one contact by id
 exports.delete = (req, res) => {
-    const id = req.params.id;
+    const id = req.params.contactId;
 
     Contacts.destroy({
         where: {id: id}

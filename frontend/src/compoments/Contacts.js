@@ -3,7 +3,6 @@ import Phones from './Phones';
 
 function Contacts(props) {
   
-  const [phones, setPhones] = useState([]);
   const [newName, setNewName] = useState('');
 
   const handleAddContact = () => {

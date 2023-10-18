@@ -40,10 +40,10 @@ exports.findAll = (req, res) => {
 
 // Get one phone by id
 exports.findOne = (req, res) => {  
-    const id = req.params.id;
+    const id = req.params.phoneId;
 
     Phones.findOne({
-        where: { id: id }
+        where: { id: id}
     })
         .then(data => {
             if (data) {
@@ -66,7 +66,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id;
     Contacts.update(req.body, {
-    where: { id: id }
+    where: { phoneId: id }
     })
     .then(num => {
         if (num == 1) {
@@ -90,7 +90,7 @@ exports.update = (req, res) => {
 
 // Delete one phone by id
 exports.delete = (req, res) => {
-    const id = req.params.id;
+    const id = req.params.phoneId;
 
     Phones.destroy({
         where: {id: id}
